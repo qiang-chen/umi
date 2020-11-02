@@ -2,7 +2,7 @@
  * @description 
  * @author cq
  * @Date 2020-10-30 16:37:31
- * @LastEditTime 2020-10-30 19:27:08
+ * @LastEditTime 2020-11-02 14:40:24
  * @LastEditors cq
  */
 import React, { useEffect } from 'react';
@@ -93,11 +93,18 @@ export default () => {
       },
     });
   }
+  const handFetch=()=>{
+    fetch("/api/users")
+    fetch("/api/home")
+  }
   return (
     <div>
       <h1>home index</h1>
       <button onClick={handClick}>
         点击跳转测试页面
+      </button>
+      <button onClick={handFetch}>
+        请求mock
       </button>
     </div>
   );
